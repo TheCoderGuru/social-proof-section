@@ -6,7 +6,7 @@
   --dark-grayish-magenta: hsl(303, 10%, 53%);
   --light-grayish-magenta: hsl(300, 24%, 96%);
   --white: hsl(0, 0%, 100%);
-  --font-base: "Spartan", sans-serif;
+  --font-base: "League Spartan", sans-serif;
 }
 
 * {
@@ -17,81 +17,74 @@
   font-family: var(--font-base);
 }
 
-.title{
+.container__title{
   color: var(--very-dark-magenta);
-  font-weight: 700; /* In this instance 1rem = 16px by browser default */
-  font-size: 2.3rem;
-  margin-right: -3rem;
-  width: 40%;
+  font-weight: 700; 
+  font-size: 40px;
   line-height: 2.4rem;
-  margin-left: 4rem;
-  margin-top: 4rem;
+  margin-block-start: 2em;
+  text-align: center;
+  padding-inline: 1em;
 }
 
-.description{
-  color: var(--dark-grayish-magenta);
-  font-weight: 500;
-  text-align: left;
-  line-height: 1.7rem;
-  margin-right: 1rem;
-  margin-left: 4rem;
-  margin-top: 1rem;
-  width: 51%;
-
+.container__description{
+  margin-block-start: 2em;
+  text-align: center;
+  padding-inline: 3em;
 }
 
 .rating{
-  /* margin: 0 auto; */
   display: flex;
-  background-color: var(--light-grayish-magenta);
-  margin-bottom: 1rem;
-  padding: 1rem;
-  border-radius: .5rem;
-  width: max-content;
-  margin-left: 4rem;
-  margin-top: 1rem;
-}
-
-.rating__star{
-  justify-content: center;
-  align-items: center;
-  display: inline-block;
-  margin: 0 auto;
-}
-
-.rating__star_group{
-  margin-right: 1rem;
-
+  text-align: center;
+  margin-block-start: 4em;
+  flex-direction: column;
+  gap: 1em;
 }
 
 .rating__description{
+  font-size: 19px;
   color: var(--very-dark-magenta);
-  font-size: 1rem;
-  text-align: center;
-  margin-right: 2rem;
 }
 
-.card-container{
+.card__group{
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
+  gap: 1em;
 }
 
-
-.content{
+.card{
   background-color: var(--very-dark-magenta);
-  margin-bottom: 2rem;
-  padding: 2rem;
-  border-radius: .5rem;
+  padding: 2em;
+  border-radius: 8px;
+  
+  width: fit-content;
 }
 
-.content__title{
-
+.card__flex{
+  display: flex;
+  gap: 1.5em;
 }
 
-.content__subtitle{
-
+.card__avatar{
+  height: 3em;
+  border-radius: 50%;
 }
 
-.content__description{
+.card__title{
+  font-size: 21px;
+  color: var(--light-grayish-magenta);
+  font-weight: 700;
+}
 
+.card__job_title{
+  font-size: 17px;
+  font-weight: 400;
+  color: var(--soft-pink);
+}
+
+.card__description{
+  margin-block-start: 1.5em;
+  color: var(--white);
+  line-height: 22px;
+  width: 16em;
 }
