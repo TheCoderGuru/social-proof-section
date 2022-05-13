@@ -17,23 +17,25 @@
   font-family: var(--font-base);
 }
 
-.container__title{
+.container__title {
   color: var(--very-dark-magenta);
-  font-weight: 700; 
+  font-weight: 700;
   font-size: 40px;
   line-height: 2.4rem;
-  margin-block-start: 2em;
+  margin-block-start: 1em;
   text-align: center;
   padding-inline: 1em;
 }
 
-.container__description{
+.container__description {
   margin-block-start: 2em;
   text-align: center;
+  font-size: 19px;
+  color: var(--dark-grayish-magenta);
   padding-inline: 3em;
 }
 
-.rating{
+.rating {
   display: flex;
   text-align: center;
   margin-block-start: 4em;
@@ -41,50 +43,97 @@
   gap: 1em;
 }
 
-.rating__description{
+.rating__description {
   font-size: 19px;
   color: var(--very-dark-magenta);
 }
 
-.card__group{
+.card__group {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1em;
+  place-items: center;
+  margin-block-start: 4em;
 }
 
-.card{
+.card {
   background-color: var(--very-dark-magenta);
   padding: 2em;
   border-radius: 8px;
-  
+
   width: fit-content;
 }
 
-.card__flex{
+.card__flex {
   display: flex;
   gap: 1.5em;
 }
 
-.card__avatar{
+.card__avatar {
   height: 3em;
   border-radius: 50%;
 }
 
-.card__title{
+.card__title {
   font-size: 21px;
   color: var(--light-grayish-magenta);
   font-weight: 700;
 }
 
-.card__job_title{
+.card__job_title {
   font-size: 17px;
   font-weight: 400;
   color: var(--soft-pink);
 }
 
-.card__description{
+.card__description {
   margin-block-start: 1.5em;
   color: var(--white);
   line-height: 22px;
   width: 16em;
+}
+
+@media only screen and (min-width: 1440px) {
+  .container__title {
+    text-align: left;
+    font-size: 48px;
+    margin-inline-start: 2.4em;
+    width: 50%;
+    padding-inline-end: 2em;
+  }
+
+  .container__description {
+    text-align: left;
+    width: 45%;
+    margin-inline-start: 5.5em;
+  }
+
+  .rating {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .container__flex{
+    display: flex;
+  }
+
+  .card__group{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .rating:nth-child(2){
+    margin-inline-start: 2em;
+  }
+
+  .rating:nth-child(3){
+    margin-inline-start: 4em;
+  }
+
+  .card:nth-child(2){
+    transform: translateY(15%);
+  }
+  .card:nth-child(3){
+    transform: translateY(25%);
+  }
 }
